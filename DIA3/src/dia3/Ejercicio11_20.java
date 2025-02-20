@@ -192,8 +192,7 @@ public class Ejercicio11_20 {
                 break;
                 case 10:
                     
-                    System.out.println("____CANTIDAD POSITIVOS, NEGATIVOS Y CEROS____ ");
-                    System.out.println("");
+                    System.out.println("____NUMERO MAYOR Y NUMERO MENOR____ ");                    System.out.println("");
                     int ingnum1=0;
                     String res1="";
                     ArrayList<Integer>numeritos=new ArrayList<>();

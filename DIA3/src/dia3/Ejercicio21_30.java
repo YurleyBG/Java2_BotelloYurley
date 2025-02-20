@@ -13,10 +13,10 @@ public class Ejercicio21_30 {
         System.out.println("4. Hexadecimal a decimal.");
         System.out.println("5. Hexadecimal a octal.");
         System.out.println("6. Hexadecimal a binario.");
-        System.out.println("7. ");
-        System.out.println("8. ");
-        System.out.println("9. ");
-        System.out.println("10. ");
+        System.out.println("7. decimal a hexadecimal.");
+        System.out.println("8. decimal a octal.");
+        System.out.println("9. decimal a binario.");
+        System.out.println("10. binario a octal.");
         System.out.println("11. Finalizar");
         System.out.println("-------------------");
     
@@ -132,59 +132,53 @@ public class Ejercicio21_30 {
                     System.out.println("Ingresar el hexadecimal a convertir");
                     scan.nextLine();
                     String hexadecimal = scan.nextLine();
-                    int obt=0;
-                    int octal = 0;
-                    int poten = 0;
-                    int cociente=0;
-
-                    for (int i = hexadecimal.length() - 1; i >= 0; i--) {
-                        char digi = hexadecimal.charAt(i);
-                        int valorD;
-
-                        if (Character.isDigit(digi)) {
-                            valorD = Character.getNumericValue(digi);
-                        } else {
-                            valorD = Character.toUpperCase(digi) - 'A' + 10;
-                        }
-
-                        int potencia16 = 1;  
-                        for (int j = 0; j < poten; j++) {
-                            potencia16 *= 16; 
-                        }
-                        obt += valorD * potencia16;
-
-                        poten++;
-                        
-                    }
-                    ArrayList<Integer> residuos = new ArrayList<>(); 
-                    while (obt > 0) {
-                        residuos.add(obt % 8);
-                        obt /= 8;
-                    }
-                    System.out.println("El numero hexadecimal era " + hexadecimal + " y el octal es: ");
-                    
-                    for (int i = residuos.size() - 1; i >= 0; i--) {
-                        System.out.print(residuos.get(i));
-                      
-                    }
-                    System.out.println(" ");
+                    System.out.println("el hexadecimal es: "+hexadecimal+" el octal es: "+ Integer.toOctalString(Integer.parseInt(hexadecimal,16)));
                 break;
                 case 6:
+                    System.out.println("HEXADECIMAL A BINARIO");
+                    System.out.println("Ingresar el hexadecimal a convertir");
+                    scan.nextLine();
+                    String hexa = scan.nextLine();
+                    System.out.println("el hexadecimal es: "+hexa+" el octal es: "+ Integer.toBinaryString(Integer.parseInt(hexa,16)));
 
                 break;
                 case 7:
+                    System.out.println("DECIMAL A HEXADECIMAL");
+                    System.out.println("Ingresar el decimal a convertir");
+                    scan.nextLine();
+                    int deci = scan.nextInt();
+                    System.out.println("el hexadecimal es: "+deci+" el octal es: "+ Integer.toHexString(deci));
 
                 break;
                 case 8:
+                    System.out.println("DECIMAL A OCTAL");
+                    System.out.println("Ingresar el decimal a convertir");
+                    scan.nextLine();
+                    int decim = scan.nextInt();
+                    System.out.println("el hexadecimal es: "+decim+" el octal es: "+ Integer.toOctalString(decim));
+
 
                 break;
                 case 9:
+                    System.out.println("DECIMAL A BINARIO");
+                    System.out.println("Ingresar el decimal a convertir");
+                    scan.nextLine();
+                    int DECIMAL = scan.nextInt();
+                    System.out.println("el hexadecimal es: "+DECIMAL+" el octal es: "+ Integer.toBinaryString(DECIMAL));
+
 
                 break;
                 case 10:
+                    System.out.println("BINARIO A OCTAL");
+                    System.out.println("Ingresar el binario a convertir");
+                    scan.nextLine();
+                    String binario1 = scan.nextLine();
+                    System.out.println("el hexadecimal es: "+binario1+" el octal es: "+ Integer.toOctalString(Integer.parseInt(binario1,2)));
 
                 break;
                 case 11:
+                     System.out.println("HAZ FINALIZADO ... ADIOSS :)");
+                    booleanito=false;
 
                 break;
             
