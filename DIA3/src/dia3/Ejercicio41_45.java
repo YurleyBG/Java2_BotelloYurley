@@ -19,6 +19,28 @@ public class Ejercicio41_45 {
         
     
     }
+    public static Boolean verificarArmstrong(String nume){
+        
+        int suma=0;
+        int number=Integer.parseInt(nume);
+        for(int i=0;i < nume.length(); i++){
+            int F=1;
+            int obt=Character.getNumericValue(nume.charAt(i));
+            for (int j = 0; j <nume.length(); j++) {
+                F*=obt;
+            }
+            suma+=F;
+        }
+        if(suma==number){
+            return true;
+
+        }
+        else{
+            return false;
+        }
+
+        
+    }
     public static void main(String [] args){
         
         boolean booleanito=true;
@@ -51,27 +73,41 @@ public class Ejercicio41_45 {
 
                 break;
                 case 2:
-                    System.out.println("ARMSTRONG 1 Y 10000");
+                    System.out.println("ARMSTRONG 1 Y 1000");
+                    for (int i = 1; i < 1000; i++) {
+                       
+                       if(verificarArmstrong(String.valueOf(i))){
+                           System.out.println(i);
+                       }
+                        
+                    }
 
                 break;
                 case 3:
-                    int number=0;
+                    
                     System.out.println("ARMSTRONG O NO");
                     
                     System.out.println("Ingresa un numero");
                     scan.nextLine();
                     String numasft=scan.nextLine();
                     int suma=0;
-                    for(int i=0;i >  numasft.length(); i++){
-                        int fca=1;
-                        numasft.charAt(i);
-                        for (int j = 1; j <numasft.length(); j++) {
-                            
-                            
+                    int number=Integer.parseInt(numasft);
+                    for(int i=0;i < numasft.length(); i++){
+                        int F=1;
+                        int obt=Character.getNumericValue(numasft.charAt(i));
+                        for (int j = 0; j <numasft.length(); j++) {
+                            F*=obt;
                         }
-                       
+                        suma+=F;
                     }
-                   
+                    if(suma==number){
+                        System.out.println("Es un numero ARMSTRONG ");
+                    
+                    }
+                    else{
+                        System.out.println("No es un numero ARMSTRONG");
+                    }
+                    
 
                 break;
                 case 4:

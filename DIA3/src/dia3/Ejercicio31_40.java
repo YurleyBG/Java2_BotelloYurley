@@ -65,7 +65,7 @@ public class Ejercicio31_40 {
                     System.out.println("Ingresar el binario a convertir");
                     scan.nextLine();
                     String binario1 = scan.nextLine();
-                    System.out.println("el hexadecimal es: "+binario1+" el octal es: "+ Integer.parseInt(binario1,2));
+                    System.out.println("el binario es: "+binario1+" el decimal es: "+ Integer.parseInt(binario1,2));
                     
 
                 break;
@@ -74,7 +74,7 @@ public class Ejercicio31_40 {
                     System.out.println("Ingresar el binario a convertir");
                     scan.nextLine();
                     String binario2 = scan.nextLine();
-                    System.out.println("el hexadecimal es: "+binario2+" el octal es: "+ Integer.toHexString(Integer.parseInt(binario2,2)));
+                    System.out.println("el binario es: "+binario2+" el hexadecimal es: "+ Integer.toHexString(Integer.parseInt(binario2,2)));
 
                 break;
                 case 3:
@@ -82,7 +82,7 @@ public class Ejercicio31_40 {
                     System.out.println("Ingresar el octal a convertir");
                     scan.nextLine();
                     String OCTAL1 = scan.nextLine();
-                    System.out.println("el hexadecimal es: "+OCTAL1+" el octal es: "+ Integer.toBinaryString(Integer.parseInt(OCTAL1,8)));
+                    System.out.println("el octal es: "+OCTAL1+" el binario es: "+ Integer.toBinaryString(Integer.parseInt(OCTAL1,8)));
 
                 break;
                 case 4:
@@ -90,7 +90,7 @@ public class Ejercicio31_40 {
                     System.out.println("Ingresar el octal a convertir");
                     scan.nextLine();
                     String OCTAL2 = scan.nextLine();
-                    System.out.println("el hexadecimal es: "+OCTAL2+" el octal es: "+ Integer.toBinaryString(Integer.parseInt(OCTAL2,8)));
+                    System.out.println("el octal es: "+OCTAL2+" el decimal es: "+ Integer.parseInt(OCTAL2,8));
 
                 break;
                 case 5:
@@ -98,7 +98,7 @@ public class Ejercicio31_40 {
                     System.out.println("Ingresar el octal a convertir");
                     scan.nextLine();
                     String OCTAL3 = scan.nextLine();
-                    System.out.println("el hexadecimal es: "+OCTAL3+" el octal es: "+ Integer.toHexString(Integer.parseInt(OCTAL3,8)));
+                    System.out.println("el octal es: "+OCTAL3+" el hexadecimal es: "+ Integer.toHexString(Integer.parseInt(OCTAL3,8)));
 
                 break;
                 case 6:
@@ -127,14 +127,25 @@ public class Ejercicio31_40 {
                 break;
                 case 8:
                     System.out.println("FIBONACCI");
+                    int firstnum = 0;
+                    int secondnum = 1;
+                    System.out.println("Ingresa el numero al que ira la seri fibonacci");
+                    int n=scan.nextInt();
+                    for (int i = 0; i < n; i++) {
+                        System.out.print(firstnum + " ");
+                        int serie = firstnum + secondnum;
+                        firstnum = secondnum;
+                        secondnum = serie;
+                    }
+                    System.out.println();
 
                 break;
                 case 9:
-                     System.out.println("NUMERO FUERTE 1-10000");
-                     for (int i = 1; i < 100000; i++) {
-                        if(verificarFuerte(i)==true){
-                            System.out.println(i);
-                        }
+                    System.out.println("NUMERO FUERTE 1-10000");
+                    for (int i = 1; i < 100000; i++) {
+                       if(verificarFuerte(i)==true){
+                           System.out.println(i);
+                       }
                         
                     }
 
