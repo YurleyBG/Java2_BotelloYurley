@@ -22,6 +22,7 @@ public class Ejercicio31_40 {
     
     
     
+        
     }
     public static Boolean verificarFuerte(int num){
     

@@ -21,6 +21,7 @@ public class Ejercicio21_30 {
         System.out.println("-------------------");
     
     
+        
     
     }
     public static void main(String [] args){

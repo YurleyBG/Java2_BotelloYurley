@@ -20,6 +20,7 @@ public class Ejercicio1_10 {
         System.out.println("-------------------");
     
     
+        
     }
     public static void main(String [] args){
         
