@@ -55,7 +55,7 @@ public class Ejercicio21_30 {
                     scan.nextLine();
                     String binario=scan.nextLine();
                     for (int i= binario.length()-1;i >= 0; i--) {
-                       char num= binario.charAt(i);
+                        char num= binario.charAt(i);
                         number = Character.getNumericValue(num);
                         
                         int calculo=1;
@@ -141,7 +141,7 @@ public class Ejercicio21_30 {
                     System.out.println("Ingresar el hexadecimal a convertir");
                     scan.nextLine();
                     String hexa = scan.nextLine();
-                    System.out.println("el hexadecimal es: "+hexa+" el octal es: "+ Integer.toBinaryString(Integer.parseInt(hexa,16)));
+                    System.out.println("el hexadecimal es: "+hexa+" el binario es: "+ Integer.toBinaryString(Integer.parseInt(hexa,16)));
 
                 break;
                 case 7:
@@ -149,7 +149,7 @@ public class Ejercicio21_30 {
                     System.out.println("Ingresar el decimal a convertir");
                     scan.nextLine();
                     int deci = scan.nextInt();
-                    System.out.println("el hexadecimal es: "+deci+" el octal es: "+ Integer.toHexString(deci));
+                    System.out.println("el decimal es: "+deci+" el hexadecimal es: "+ Integer.toHexString(deci));
 
                 break;
                 case 8:
@@ -157,7 +157,7 @@ public class Ejercicio21_30 {
                     System.out.println("Ingresar el decimal a convertir");
                     scan.nextLine();
                     int decim = scan.nextInt();
-                    System.out.println("el hexadecimal es: "+decim+" el octal es: "+ Integer.toOctalString(decim));
+                    System.out.println("el decimal es: "+decim+" el octal es: "+ Integer.toOctalString(decim));
 
 
                 break;
@@ -166,7 +166,7 @@ public class Ejercicio21_30 {
                     System.out.println("Ingresar el decimal a convertir");
                     scan.nextLine();
                     int DECIMAL = scan.nextInt();
-                    System.out.println("el hexadecimal es: "+DECIMAL+" el octal es: "+ Integer.toBinaryString(DECIMAL));
+                    System.out.println("el decimal es: "+DECIMAL+" el binario es: "+ Integer.toBinaryString(DECIMAL));
 
 
                 break;
@@ -175,7 +175,7 @@ public class Ejercicio21_30 {
                     System.out.println("Ingresar el binario a convertir");
                     scan.nextLine();
                     String binario1 = scan.nextLine();
-                    System.out.println("el hexadecimal es: "+binario1+" el octal es: "+ Integer.toOctalString(Integer.parseInt(binario1,2)));
+                    System.out.println("el binario es: "+binario1+" el octal es: "+ Integer.toOctalString(Integer.parseInt(binario1,2)));
 
                 break;
                 case 11:

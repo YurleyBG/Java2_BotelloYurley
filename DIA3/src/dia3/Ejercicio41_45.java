@@ -55,7 +55,23 @@ public class Ejercicio41_45 {
 
                 break;
                 case 3:
+                    int number=0;
                     System.out.println("ARMSTRONG O NO");
+                    
+                    System.out.println("Ingresa un numero");
+                    scan.nextLine();
+                    String numasft=scan.nextLine();
+                    int suma=0;
+                    for(int i=0;i >  numasft.length(); i++){
+                        int fca=1;
+                        numasft.charAt(i);
+                        for (int j = 1; j <numasft.length(); j++) {
+                            
+                            
+                        }
+                       
+                    }
+                   
 
                 break;
                 case 4:
