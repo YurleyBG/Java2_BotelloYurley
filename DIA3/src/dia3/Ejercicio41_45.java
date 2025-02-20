@@ -5,6 +5,7 @@ import java.util.*;
 public class Ejercicio41_45 {
     public static void Menu(){
    
+        
         System.out.println("-------MENU-------");
         System.out.println("1.Verificar si un número es un Número Perfecto o no. ");
         System.out.println("2.Números de Armstrong entre 1 y 1000. ");

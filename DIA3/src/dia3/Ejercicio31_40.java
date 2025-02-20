@@ -6,6 +6,7 @@ public class Ejercicio31_40 {
     
     public static void Menu(){
    
+        
         System.out.println("-------MENU-------");
         System.out.println("1. binario a decimal.. ");
         System.out.println("2. binario a hexadecimal.");

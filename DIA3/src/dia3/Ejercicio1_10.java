@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Ejercicio1_10 {
     public static void Menu(){
+        
         System.out.println(" ");
         System.out.println("-------MENU-------");
         System.out.println("1. Números naturales del 1 al N. ");

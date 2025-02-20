@@ -6,6 +6,7 @@ public class Ejercicio11_20 {
     
     public static void Menu(){
    
+        
         System.out.println("-------MENU-------");
         System.out.println("1. Suma de todos los números impares entre 1 y n.. ");
         System.out.println("2. Valores ASCII.");

@@ -6,6 +6,7 @@ public class Ejercicio21_30 {
     
     public static void Menu(){
    
+        
         System.out.println("-------MENU-------");
         System.out.println("1.Números y la suma de todos los enteros entre 100 y 200 /9. ");
         System.out.println("2. Número binario a decimal");
