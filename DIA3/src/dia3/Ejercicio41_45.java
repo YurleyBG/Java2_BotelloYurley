@@ -30,22 +30,32 @@ public class Ejercicio41_45 {
                 case 1:
                     System.out.println("NUMERO PERFECTO 1-10000");
                   
-                    int numperfe = 10000;
-                    for (int numero = 1; numero <= numperfe; numero++) {
-                    int sumaDivisores = 0;
+                     int numperfe = 10000;
+                    int sumita = 0;
 
-                    for (int i = 1; i <= Math.sqrt(numero); i++) {
-                        if (numero % i == 0) {
-                            sumaDivisores += i;
-                            if (i * i != numero) {
-                                sumaDivisores += numero / i;
+                    for (int a = 2; a <= numperfe; a++) {
+
+                        int obtener1 = 1;
+
+                        for (int i = 2; i * i <= a; i++) { 
+                            if (a % i == 0) {
+                                obtener1 += i;
+                                if (i * i != a) {
+                                    obtener1 += a / i;
+                                }
                             }
                         }
-                    }
-                        if (sumaDivisores == numero) {
-                            System.out.println(numero);
+
+                        if (obtener1 == a) {
+                            System.out.println(a);
+                            obtener1 += 1; // 
+                            sumita += a;
                         }
                     }
+
+                    System.out.println(sumita);
+                    
+                    
 
                 break;
                 case 2:

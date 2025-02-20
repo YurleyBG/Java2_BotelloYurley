@@ -8,11 +8,11 @@ public class Ejercicio21_30 {
    
         System.out.println("-------MENU-------");
         System.out.println("1.Números y la suma de todos los enteros entre 100 y 200 /9. ");
-        System.out.println("2. ");
-        System.out.println("3. ");
-        System.out.println("4. ");
-        System.out.println("5. ");
-        System.out.println("6. ");
+        System.out.println("2. Número binario a decimal");
+        System.out.println("3. Número Fuerte o no.");
+        System.out.println("4. Hexadecimal a decimal.");
+        System.out.println("5. Hexadecimal a octal.");
+        System.out.println("6. Hexadecimal a binario.");
         System.out.println("7. ");
         System.out.println("8. ");
         System.out.println("9. ");
@@ -112,8 +112,14 @@ public class Ejercicio21_30 {
                         } else {
                             valorDigito = Character.toUpperCase(digito) - 'A' + 10;
                         }
+                        System.out.println(valorDigito);
+                       
+                        int potencia16 = 1;  
+                        for (int j = 0; j < p; j++) {
+                            potencia16 *= 16; 
+                        }
+                        d += valorDigito * potencia16;
 
-                        d+= valorDigito * Math.pow(16, p);
                         p++;
                     }
 
@@ -126,9 +132,10 @@ public class Ejercicio21_30 {
                     System.out.println("Ingresar el hexadecimal a convertir");
                     scan.nextLine();
                     String hexadecimal = scan.nextLine();
-
-                    int decim = 0;
+                    int obt=0;
+                    int octal = 0;
                     int poten = 0;
+                    int cociente=0;
 
                     for (int i = hexadecimal.length() - 1; i >= 0; i--) {
                         char digi = hexadecimal.charAt(i);
@@ -140,14 +147,27 @@ public class Ejercicio21_30 {
                             valorD = Character.toUpperCase(digi) - 'A' + 10;
                         }
 
-                        decim += valorD * Math.pow(16, poten);
+                        int potencia16 = 1;  
+                        for (int j = 0; j < poten; j++) {
+                            potencia16 *= 16; 
+                        }
+                        obt += valorD * potencia16;
+
                         poten++;
+                        
                     }
-
-                    String octal = Integer.toOctalString(decim);
-
-                    System.out.println("El numero hexadecimal era " + hexadecimal + " el octal es: " + octal);
+                    ArrayList<Integer> residuos = new ArrayList<>(); 
+                    while (obt > 0) {
+                        residuos.add(obt % 8);
+                        obt /= 8;
+                    }
+                    System.out.println("El numero hexadecimal era " + hexadecimal + " y el octal es: ");
                     
+                    for (int i = residuos.size() - 1; i >= 0; i--) {
+                        System.out.print(residuos.get(i));
+                      
+                    }
+                    System.out.println(" ");
                 break;
                 case 6:
 
