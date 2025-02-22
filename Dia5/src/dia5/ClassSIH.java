@@ -45,6 +45,7 @@ public class ClassSIH {
     
     
     }
+    // class pacientes
     class Paciente extends personal{
         int id;
         int edad;
@@ -235,6 +236,8 @@ public class ClassSIH {
 
        
     }
+
+    // class pabellom
     class pabellon{
     
         int id ;
