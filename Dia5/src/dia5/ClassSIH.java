@@ -6,7 +6,7 @@ public class ClassSIH {
     // class`personal medico
     
     class personal{
-        int id;
+        int idPersonal;
         String nombre1;
         String nombre2;
         String apellido1 ;
@@ -16,9 +16,9 @@ public class ClassSIH {
         String Fecha_vinculacion;
 
 
-        public personal(int id ,String Nombre1,String Nombre2, String apellido1, String apellido2,
+        public personal(int idPersonal ,String Nombre1,String Nombre2, String apellido1, String apellido2,
         String pila, String titulo, String Fecha_v){
-            this.id=id;
+            this.idPersonal=idPersonal;
             this.nombre1=Nombre1;
             this.nombre2=Nombre2;
             this.apellido1=apellido1;
@@ -27,8 +27,8 @@ public class ClassSIH {
             this.Titulo=titulo;
             this.Fecha_vinculacion=Fecha_v;
         }
-        public personal(int id,String nombre1,String nombre2, String apellido1, String apellido2){
-            this.id=id;
+        public personal(String nombre1,String nombre2, String apellido1, String apellido2){
+            
             this.nombre1=nombre1;
             this.nombre2=nombre2;
             this.apellido1=apellido1;
@@ -39,13 +39,12 @@ public class ClassSIH {
 
         @Override
         public String toString() {
-            return "personal{" + "id=" + id + ", nombre1=" + nombre1 + ", nombre2=" + nombre2 + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", Pila=" + Pila + ", Titulo=" + Titulo + ", Fecha_vinculacion=" + Fecha_vinculacion + '}';
+            return "personal{" + "id=" + idPersonal + ", nombre1=" + nombre1 + ", nombre2=" + nombre2 + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", Pila=" + Pila + ", Titulo=" + Titulo + ", Fecha_vinculacion=" + Fecha_vinculacion + '}';
         }
     
     
     
     }
-    // class pacientes
     class Paciente extends personal{
         int id;
         int edad;
@@ -54,7 +53,8 @@ public class ClassSIH {
         
         public Paciente( int id ,String nombre1,String nombre2, String apellido1, String apellido2, int edad,String fecha_nacimiento, String Fecha_ingreso){
             
-            super(id,nombre1,nombre2,apellido1,apellido2);
+            super(nombre1,nombre2,apellido1,apellido2);
+            this.id=id;
             this.edad=edad;
             this.fecha_nacimiento= fecha_nacimiento;
             this.Fecha_ingreso=Fecha_ingreso;
@@ -236,8 +236,6 @@ public class ClassSIH {
 
        
     }
-
-    // class pabellom
     class pabellon{
     
         int id ;
