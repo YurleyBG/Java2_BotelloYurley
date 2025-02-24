@@ -4,10 +4,6 @@
  */
 package dia6;
 
-/**
- *
- * @author Uniminuto Tibu
- */
 public class Dia6 {
 
     
