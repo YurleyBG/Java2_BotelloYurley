@@ -38,18 +38,18 @@ public class CuentaBancaria {
     // metodo para retirra platica con validacion
     public void retirar(double cantidad){
     
-           if(cantidad>0 && cantidad<=saldo){
-               
-                saldo=saldo - cantidad;
-                System.out.println("el retiro fue realizado");
-               
-           }
-           else if(cantidad>saldo){
-               System.out.println("No tienes fondos suficientes");
-           }
-           else{
-               System.out.println("la cantidad a retirar debe ser positiva");
-           }
+        if(cantidad>0 && cantidad<=saldo){
+
+            saldo=saldo - cantidad;
+            System.out.println("el retiro fue realizado");
+
+        }
+        else if(cantidad>saldo){
+            System.out.println("No tienes fondos suficientes");
+        }
+        else{
+            System.out.println("la cantidad a retirar debe ser positiva");
+        }
     }
   
 }

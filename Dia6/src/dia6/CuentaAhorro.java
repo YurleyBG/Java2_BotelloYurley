@@ -1,13 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package dia6;
 
-/**
- *
- * @author Uniminuto Tibu
- */
-public class CuentaAhorro {
+
+class CuentaAhorro extends CuentaBancaria{
     
+    private double tasaInteres;
+
+    public CuentaAhorro(double tasaInteres, String numeroCuenta, double saldo) {
+        super(numeroCuenta, saldo);
+        this.tasaInteres = tasaInteres;
+    }
+    
+    public void aplicarInteres(double saldo){
+       
+        saldo = saldo + (saldo * tasaInteres / 100);
+        
+        System.out.println(saldo);
+    
+    }
+
+
+
 }
