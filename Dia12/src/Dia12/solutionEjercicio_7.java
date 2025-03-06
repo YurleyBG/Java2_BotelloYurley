@@ -10,14 +10,13 @@ interface enemy{
     void init(List<enemy>enemigo);
 }
 public class solutionEjercicio_7 {
+    // violaba el principio abierto y cerrado ya que se debia modificar el codigo para agregar otro tipo de enemigo
     
     private List<enemy>enemigo=new ArrayList<>();
     private boolean endgame=false;
     
-    
     public solutionEjercicio_7(List<enemy>enemigo){
         this.enemigo=enemigo;
-    
     }
     
     public void run(){
@@ -29,11 +28,7 @@ public class solutionEjercicio_7 {
             }
             break;
         }
-        
-    
     }
-    
-    
     static class gunEnemy implements enemy{
 
         @Override
@@ -60,9 +55,6 @@ public class solutionEjercicio_7 {
         public void init(List<enemy> enemigo) {
             enemigo.add(this);
         }
-    
-    
-    
     }
     public static void main(String[] args) {
         
