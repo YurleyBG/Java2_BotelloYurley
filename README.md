@@ -1,4 +1,4 @@
-#JAVA
+# JAVA
 
 Este repositorio tiene algunos proyectos, tareas con su respectiva clases de java , en el que podemos encontrar 
 cierta cantidad de archivos como los siguientes:
@@ -35,8 +35,9 @@ al hacer esto se descargará  los datos del repositorio. puedes usar NetBeans  y
 
  ## Tecnología utilizadas
 
-*Java
+* Java
 
 
-#Creditos
+# Creditos
+
 Estos trabajos fue realizado por yurley botello garcia campers de campuslands.
