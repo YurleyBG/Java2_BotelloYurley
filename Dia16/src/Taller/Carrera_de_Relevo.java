@@ -15,9 +15,9 @@ public class Carrera_de_Relevo extends Thread{
     public void run(){
        
         synchronized (getClass()){
-            int contador=0;
+           
             try{
-                contador+=1;
+               
                 Random random = new Random();
                 System.out.println("el " + atleta + " inicio la carrera");
                 int testigo= random.nextInt(9000)+2000;
@@ -25,7 +25,7 @@ public class Carrera_de_Relevo extends Thread{
                 System.out.println("el " + atleta + "finalizo la ronda"+" tiempo "+(testigo / 1000));
                
                 getClass().notifyAll();
-                   System.out.println(contador);
+                
                 try{
                      getClass().wait();
                 }
@@ -40,6 +40,7 @@ public class Carrera_de_Relevo extends Thread{
                 getClass().notifyAll();
 
             }
+             getClass().notifyAll();
         }
     }
 
