@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CrudPersistencia {
-    private static final String ARCHIVO = "./src/Persistencia/ArchivoObjeto/data.txt";
+    private static final String ARCHIVO = "./src/Archivo_objeto/data.txt";
     private static List<Persona> personas = new ArrayList<>();
 
     // Cargar datos desde el archivo

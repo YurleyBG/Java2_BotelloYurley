@@ -8,7 +8,7 @@ import java.io.IOException;
 
 
 public class PersistenciaFile {
-    private static final String Nombre_archivo="./src/ArchivoSimple/data.txt";
+    private static final String Nombre_archivo="./src/Archivo_objeto/data.txt";
     
     
     public static void guardarDatos(String contenido) {
