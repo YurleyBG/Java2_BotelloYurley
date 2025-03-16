@@ -1,3 +1,1 @@
-P,1,"Pedro",24
-P,2,"Maria",24
-PR,1,"Bob marley",200.0
+ P, 1pablo 28
