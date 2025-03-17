@@ -78,5 +78,48 @@ public class usuarioDAD {
         }
     
     }
+    // eliminar (Delete)
+    public List<String> EliminarUsuarioID( int id ){
+        String sql =" delete from usuarios where id=?";
+        List<String> ListaUsuario = new ArrayList<>();
+        try{
+            Connection conexionInterna=conectar();
+            PreparedStatement solicitud =conexionInterna.prepareStatement(sql);
+            solicitud.setInt(1,id);
+            int filasEliminada=solicitud.executeUpdate();
+            
+            
+        }catch(SQLException e){
+        
+            e.printStackTrace();
+        }
+        return ListaUsuario;
+       
+    }
+    
+    
+    //leer por id (SELECT)
+    //select * from ususarios;
+    public List<String> obtenerUsuarioID( int id ){
+        String sql =" select * from usuarios where id=?";
+        List<String> ListaUsuario = new ArrayList<>();
+        try{
+            Connection conexionInterna=conectar();
+            PreparedStatement solicitud =conexionInterna.prepareStatement(sql);
+            solicitud.setInt(1,id);
+            ResultSet ver=solicitud.executeQuery();
+            while(ver.next()){
+                ListaUsuario.add(ver.getInt("id")
+                        + " - "+ ver.getString("nombre")+ " - " 
+                                +ver.getString("email"));
+            }
+            
+        }catch(SQLException e){
+        
+            e.printStackTrace();
+        }
+        return ListaUsuario;
+       
+    }
     
 }
