@@ -115,12 +115,13 @@ public class CtrlUsuario implements ActionListener {
             
         }
         if (e.getSource() == JframeVista.botonBuscarID) {
-            
+            JframeVista.TextoArea1.setText(" ");
             modelo.setId(Integer.parseInt(JframeVista.TextId.getText()));
             try {
-                if(consultas.obtenerUsuarioID(modelo)){
-                    JframeVista.TextoArea1.setText(modelo.getNombre());
-                    JframeVista.TextoArea1.setText(modelo.getEmail());
+                if(consultas.obtenerUsuarioID(modelo)){ 
+                    
+                    JframeVista.TextoArea1.setText(" \n "+ modelo.getId()+ " - " + modelo.getNombre()+ " - " + modelo.getEmail());
+             
                 }
                 else{
                     JOptionPane.showMessageDialog(null, "usuario no encontrado");
