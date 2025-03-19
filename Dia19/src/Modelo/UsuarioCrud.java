@@ -13,9 +13,8 @@ public class UsuarioCrud {
     private String password="uwcgRHABIvraHnEXvbB8";
     
     private Connection conectar() throws SQLException{
+        System.out.println("Se conecto a la BD");
         return DriverManager.getConnection(url, usuario, password);
-    
-    
     }
     // crear (Insert)
     public String insertUsuario(String nombre ,String email){
@@ -121,25 +120,42 @@ public class UsuarioCrud {
     
     //leer por id (SELECT)
     //select * from ususarios;
-    public List<String> obtenerUsuarioID( int id ){
+    public boolean obtenerUsuarioID( Usuario user ) throws SQLException{
+        PreparedStatement ps= null;
+        ResultSet result=null;
+        Connection conexionInterna=conectar();
         String sql =" select * from usuarios where id=?";
-        List<String> ListaUsuario = new ArrayList<>();
+      
         try{
-            Connection conexionInterna=conectar();
-            PreparedStatement solicitud =conexionInterna.prepareStatement(sql);
-            solicitud.setInt(1,id);
-            ResultSet ver=solicitud.executeQuery();
-            while(ver.next()){
-                ListaUsuario.add(ver.getInt("id")
-                        + " - "+ ver.getString("nombre")+ " - " 
-                                +ver.getString("email"));
-            }
+           
+           ps=conexionInterna.prepareStatement(sql);
+           ps.setInt(1, user.getId());
+           result =ps.executeQuery();
+           if(result.next()){
+               user.setNombre(result.getString("Nombre"));
+               user.setEmail(result.getString("Email"));
+               return true;
+           }
+           return false;
             
         }catch(SQLException e){
         
             e.printStackTrace();
+            return false;
         }
-        return ListaUsuario;
+        finally{
+            try{
+                conexionInterna.close();
+            
+            }
+            catch(SQLException e){
+                System.err.println(e);
+            
+            }
+        
+        
+        }
+       
        
     }
     

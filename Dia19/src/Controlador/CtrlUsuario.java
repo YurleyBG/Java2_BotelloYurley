@@ -6,8 +6,11 @@ import Modelo.UsuarioCrud;
 import Vista.vista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
         
@@ -26,6 +29,7 @@ public class CtrlUsuario implements ActionListener {
         this.JframeVista.btnEliminar.addActionListener(this);
         this.JframeVista.btnLimpiar.addActionListener(this);
         this.JframeVista.btnBuscar.addActionListener(this);
+        this.JframeVista.botonBuscarID.addActionListener(this);
     }
     public void iniciar() {
         JframeVista.setTitle("Usuarios");
@@ -94,7 +98,7 @@ public class CtrlUsuario implements ActionListener {
         }
 
         if (e.getSource() == JframeVista.btnBuscar) {
-            JframeVista.TextoArea1.setText(" ");
+            JframeVista.TextoArea1.setText("");
             List<String> result=consultas.obtenerUsuario();
             if (result.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "usuario no encontrado");
@@ -110,29 +114,21 @@ public class CtrlUsuario implements ActionListener {
            }
             
         }
-        if (e.getSource() == JframeVista.btnBuscarID) {
+        if (e.getSource() == JframeVista.botonBuscarID) {
             
+            modelo.setId(Integer.parseInt(JframeVista.TextId.getText()));
             try {
-                   String idecita1 = JframeVista.TextId.getText();
-                   int i = Integer.parseInt(idecita1);
-                   List<String> result11 = consultas.obtenerUsuarioID(i);
-                   if (result11.isEmpty()) {
-                       JOptionPane.showMessageDialog(null, "usuario no encontrado");
-                       limpiar();
-                   } else {
-                       for (String usuario : result11) {
-                           JframeVista.TextoArea1.append(usuario + "\n");
-                       }
-                       limpiar();
-                   }
-               } catch (NumberFormatException ex) {
-                   JOptionPane.showMessageDialog(null, "ID debe ser un número entero.");
-                   ex.printStackTrace(); // Para depuración
-              
-               } catch (Exception ex){
-                   JOptionPane.showMessageDialog(null, "Error inesperado");
-                   ex.printStackTrace();
-               }
+                if(consultas.obtenerUsuarioID(modelo)){
+                    JframeVista.TextoArea1.setText(modelo.getNombre());
+                    JframeVista.TextoArea1.setText(modelo.getEmail());
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "usuario no encontrado");
+                    limpiar();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(CtrlUsuario.class.getName()).log(Level.SEVERE, null, ex);
+            }
             
         }
 

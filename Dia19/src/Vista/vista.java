@@ -42,7 +42,7 @@ public class vista extends javax.swing.JFrame {
         btnLimpiar = new javax.swing.JButton();
         TextId = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        btnBuscarID = new javax.swing.JButton();
+        botonBuscarID = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         TextoArea1 = new javax.swing.JTextArea();
 
@@ -170,7 +170,7 @@ public class vista extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe Script", 1, 14)); // NOI18N
         jLabel6.setText("DATA");
 
-        btnBuscarID.setText("Buscar ID");
+        botonBuscarID.setText("Buscar ID");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -203,7 +203,7 @@ public class vista extends javax.swing.JFrame {
                 .addContainerGap(36, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBuscarID)
+                .addComponent(botonBuscarID)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLimpiar)
                 .addGap(18, 18, 18))
@@ -215,7 +215,7 @@ public class vista extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLimpiar)
                     .addComponent(jLabel6)
-                    .addComponent(btnBuscarID))
+                    .addComponent(botonBuscarID))
                 .addGap(24, 24, 24)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -325,10 +325,10 @@ public class vista extends javax.swing.JFrame {
     public javax.swing.JTextField TextId;
     public javax.swing.JTextField TextNombre;
     public javax.swing.JTextArea TextoArea1;
+    public javax.swing.JButton botonBuscarID;
     public javax.swing.JButton btnActualizar;
     public javax.swing.JButton btnAgregar;
     public javax.swing.JButton btnBuscar;
-    public javax.swing.JButton btnBuscarID;
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnLimpiar;
     private javax.swing.JButton jButton1;
